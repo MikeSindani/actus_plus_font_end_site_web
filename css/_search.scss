@@ -1,0 +1,95 @@
+ /* Modal*/
+  
+  .modal{
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 999; /* Sit on top */
+        left: 0;
+        top: 60px;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow-x: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+
+        /* Modal Content */
+    .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        width: 80%;
+        height: 200px;
+        box-shadow: 0 4px 8px 20px rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        animation-name: animatetop;
+        animation-duration: 0.4s;
+       
+        
+        /* Modal Header */
+        .modal-header {
+            padding: 2px 16px;
+            background-color: white;
+            color: rgb(0, 0, 0);
+            .close{
+                .text-search{
+                    font-size: 25px;
+                    font-weight: bold;
+                    position: relative;
+                    top:-7px;
+                    left:400px;
+                }
+                .fermer{
+                    font-size: 50px;
+                    cursor: pointer;
+                } 
+                
+                }
+            }
+        }
+        /* Modal Body */
+    .modal-body {
+        padding: 2px 16px;
+        form{
+            input[type="text"]{
+                border-radius: 10px;
+                border: none;
+                color: rgb(0, 0, 0);
+                background-color: #f3f3f3;
+                font-size: 16px;
+                padding: 1vw 70vh;
+            }
+            button{
+                background: none;
+                border: none;
+                font-size: 20px;
+                position :relative;
+                top:-35px;
+                left: 10px;
+            }
+        }
+        .suggest{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+           
+
+            .suggest-link{
+                background-color: tomato;
+                padding:0.2vw 4vh;
+                border-radius: 20px;
+                margin-left: 10px;
+                a{
+                   text-decoration: none;
+                   color: white;
+                }  
+            }
+     }
+}
+}
+  
+   
+  /* Add Animation */
+    @keyframes animatetop {
+        from {top: -300px; opacity: 0}
+        to {top: 0; opacity: 1}
+    }

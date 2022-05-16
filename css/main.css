@@ -1,0 +1,20 @@
+/* fint google */ 
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Oswald:wght@300;400;500;600;700&family=Quicksand:wght@300;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+/* main */
+body{
+    margin: 0;
+    padding: 0;
+    background-color:#F5F5F5;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif ;
+}
+
+.navbar-mobile {
+    display: none;
+}
+.menu{
+    display: none;
+}

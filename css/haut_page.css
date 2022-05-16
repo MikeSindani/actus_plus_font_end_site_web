@@ -1,0 +1,59 @@
+body .haut-page {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.411);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.411);
+  z-index: 999;
+  padding: 15px 15px;
+  border-radius: 50%;
+  color: white;
+  background-color: black;
+}
+
+body .haut-page:active {
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  background-color: tomato;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body .haut-page a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+}
+
+body #dark-mode-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.411);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.411);
+  z-index: 999;
+  padding: 15px 15px;
+  border-radius: 50%;
+  color: white;
+  background-color: black;
+}
+
+body #dark-mode-btn:active {
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  background-color: tomato;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body #dark-mode-btn a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+}
+
+body .block-class {
+  display: block;
+}
+/*# sourceMappingURL=haut_page.css.map */

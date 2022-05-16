@@ -1,0 +1,24 @@
+/* variable */ 
+
+$mainColor : tomato;
+
+.navbar-mobile {
+    display: none;
+}
+.menu{
+    display: none;
+}
+/* NAV BAR */
+@import "./nav";
+/* SEARCH NAV BAR */
+@import "./search";
+/* LOGIN NAV BAR */
+@import "./connexion";
+/* BODY ARTICLES */
+@import "./body-articles";
+/* INSCRIPTION */
+@import "./signup";
+/* FOOTER */ 
+@import "./footer";
+/*animation*/
+@import "./carrousel";

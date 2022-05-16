@@ -1,0 +1,27 @@
+/* MOBILE ADATATION */ 
+/* variable */ 
+$mainColor : tomato;
+/* fonction */ 
+@mixin user-name($sizefont) {
+    font-size: $sizefont;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px){
+   /* mobile navbar */ 
+    @import "./navbar-mobile";
+    /* body */ 
+    @import "./body-mobile";
+    /* footer */ 
+    @import "./footer-mobile";
+    /* key */ 
+    @keyframes menu-in {    from{
+        transform: translateX(23rem);
+        opacity: 0.8;
+    }
+    to{ transform: translateX(23rem);
+        opacity: 1;
+    }}
+
+ 
+}

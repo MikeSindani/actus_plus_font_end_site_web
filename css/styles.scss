@@ -1,0 +1,41 @@
+/* variable */ 
+
+$mainColor : tomato;
+/* fonction */ 
+@mixin user-name($sizefont) {
+    font-size: $sizefont;
+    text-transform: uppercase;
+}
+/* fint google */ 
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Oswald:wght@300;400;500;600;700&family=Quicksand:wght@300;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+/* MAIN */ 
+
+/* bouton haut de page */
+@import "./haut_page";
+/* NAV BAR */
+@import "./nav";
+/* SEARCH NAV BAR */
+@import "./search";
+/* LOGIN NAV BAR */
+@import "./connexion";
+/* INSCRIPTION */
+@import "./signup";
+/* POSTS */
+@import "./body";
+/* FOOTER */ 
+@import "./footer";
+/*animation*/
+@import "./carrousel";
+
+
+
+@keyframes fadein {    from{
+        transform: translateY(50px);
+        opacity: 0.2;
+    }
+    to{ transform: translateY(-20px);
+        opacity: 1;
+    }
+    
+}

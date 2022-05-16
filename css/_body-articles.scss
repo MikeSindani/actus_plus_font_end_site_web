@@ -1,0 +1,323 @@
+/* fonction */ 
+@mixin user-name($sizefont) {
+    font-size: $sizefont;
+    text-transform: uppercase;
+}
+@mixin titre {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+@mixin input {
+    border-radius: 10px;
+    border: none;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    font-size: 16px;
+    
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.articles-container{
+     margin-top: 20px ;
+    .part-categories{
+        display: none;
+        background-color: rgb(230, 230, 230);
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 25%;
+        height:120%;
+
+        h3{
+            text-align: left;
+            margin-left: 20px;
+           font-weight: bold;
+        }
+        .links_cat {
+            list-style: none;
+            margin: 5px;
+            .link a{
+                text-decoration: none;
+                color: #333333;
+                font-weight: 500;
+            }
+        }
+    }
+    .part-article{
+        .times{
+            text-align: center;
+            align-items: center;
+            color: rgb(65, 65, 65);
+            text-transform: uppercase;
+        }
+        .title{
+            text-align: center;
+            align-items: center;
+            font-family: 'Oswald', sans-serif;
+        }
+        .picture{
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.50);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+        .categ{
+            padding: 5px 5px;
+            background-color: tomato;
+            border-radius: 20px;
+            margin-bottom: 50px;
+            color:white;
+            text-align: center;
+            width: 150px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .contenu{
+            position: relative;
+            top: 50px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 20px;
+            text-align: justify;
+            width: 800px;
+        }
+        .share-links{
+            position: relative;
+            top: 50px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            &::before{
+                content: "";
+                width:100px;
+            }
+            .titre{
+                font-weight: bold;
+            }
+           ul{
+               list-style-type: none;
+               display: flex;
+               flex-direction: row;
+               justify-content: center;
+               li{
+                  margin: 5px;
+                  
+                a{  text-decoration: none;
+                    color: white;
+                    background-color: black;
+                    border-radius: 50%;
+                    padding: 10px;
+    
+                }
+               }
+           }
+        }
+      
+    }
+    .admin-section{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        background-color: tomato;
+        color: white;
+        padding: 10px;
+        border-radius: 20px;
+        width: 450px;
+        position: relative;
+        top: 80px;
+        .img{
+            border-radius: 50%;
+        }
+        .admin-body{
+            float: right;
+            position: relative;
+            top: 10px;
+            .name{
+               font-size: 18px;
+            }
+            ul{
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+                li{
+                   margin-left: 10px;
+                   a{
+                       color: white;
+                   }
+                }
+            }
+        }  
+
+    }
+    .commentaire{
+        @include flex-center();
+        flex-direction: column;
+        position: relative;
+        top:100px ;
+        .titre{
+           @include titre();
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            textarea{
+                @include input();
+            }
+            div{
+                @include flex-center();
+                flex-direction: row;
+                margin: 5px 0;
+
+                input[type="submit"]{
+                    border-radius: 20px;
+                    border: none;
+                    background-color: tomato;
+                    color: white;
+                    width: 150px;
+                    margin-top: 10px;
+                    font-size: 16px;
+                    padding: 5px 15px;
+                    position:relative;
+                    top:10px;
+                    left: 20px;
+                    &:hover{
+                        background-color: transparent;
+                        color:tomato;
+                    }
+                }
+                .see_comment{
+                    border-radius: 20px;
+                    background-color: transparent;
+                    text-align: center;
+                    color: rgb(0, 0, 0);
+                    width: 200px;
+                    margin-top: 10px;
+                    font-size: 16px;
+                    padding: 5px 15px;
+                    translate: all .5s;
+                    color: white;
+                    background-color: rgb(0, 0, 0);
+                    cursor: pointer;
+                    position: relative;
+                    top: 13px;
+                    margin-left: 30px ;
+                    &:hover{
+                        background-color: tomato;
+                        border: none;
+                        color: white;
+                    }
+                }
+    } 
+} 
+}
+    .slider-vertical{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 100px;
+        width: 100%;
+        margin-top: 20px ;
+        padding:15px;
+        background-color: #e5e5e5;
+        .titre{
+            @include titre();
+        }
+        .posts-vertical{
+            display: flex;
+            flex-direction: row;
+            .post-container-vertical{
+                display: block;
+                position: relative;
+                left: 5px;
+                padding: 5px;
+                width: 360px;
+                height: 370px;
+                transition: all .6s;
+                transition: background-color ease-in-out .5s;
+                transition: all .6s ease-in-out;
+               
+               &:hover{
+                    transform: scale(1.02);
+                    color: black;
+                    border-radius: 15px;
+                }
+                a{
+                    text-decoration: none;
+                    color: #333333;
+                }
+    
+                .post-main{
+                    position: absolute;
+                    left: 120px;
+    
+                    .post-time{
+                        color: gray;
+                        margin: 0;
+                    }
+                    .post-title{
+                        margin: 5px;
+                        font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    }
+                    .post-cat{
+                        color: white;
+                        font-size: 14px;
+                        background-color:tomato;
+                        padding: 2px 10px;
+                        border-radius: 10px;
+                        margin-left: 10px;
+                     }
+                     .post-discp{
+                        text-align: justify;
+                        color: #2b2b2b;
+                        transition:color .6s;
+                        font-size: 15px;
+                        position: absolute;
+                        width: 300px;
+                        left:-80px;
+                        height: 10px;
+                        margin: 5px 0 10px 0;
+                      }
+                     .post-user{
+                        position: relative;
+                        top:50px;
+                        .user-name{
+                            position: relative;
+                            top: -10px;
+                            @include user-name(14px);
+    
+                        }
+                        .user-img{
+                            border-radius: 50%;
+                        }
+    
+                     }
+                     
+                }
+                .post-thumb{
+                    margin: 0 5px 0 0;
+                    padding: 0;
+                    transition: transform .5s ease-in-out;
+                    border-radius: 15px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.20);
+                    &:hover{
+                        transform: scale(0.95);  
+                    }
+                }
+               
+            }
+        }  
+    }  
+}
